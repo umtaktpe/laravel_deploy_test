@@ -24,7 +24,7 @@ add('writable_dirs', []);
 
 host('206.189.200.136')
     ->user('deployer')
-    ->set('deploy_path', '~/Sites/{{application}}');    
+    ->set('deploy_path', '/var/www/html');    
     
 // Tasks
 
