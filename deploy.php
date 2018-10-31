@@ -4,7 +4,7 @@ namespace Deployer;
 require 'recipe/laravel.php';
 
 // Project name
-set('application', 'ornek1');
+set('application', 'Ornek 1');
 
 // Project repository
 set('repository', 'git@github.com:umtaktpe/laravel_deploy_test.git');
