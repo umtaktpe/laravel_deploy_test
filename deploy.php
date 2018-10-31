@@ -7,7 +7,7 @@ require 'recipe/laravel.php';
 set('application', 'ornek1');
 
 // Project repository
-set('repository', 'git@domain.com:username/repository.git');
+set('repository', 'git@github.com:umtaktpe/laravel_deploy_test.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', true); 
@@ -22,8 +22,9 @@ add('writable_dirs', []);
 
 // Hosts
 
-host('project.com')
-    ->set('deploy_path', '~/{{application}}');    
+host('206.189.200.136')
+    ->user('deployer')
+    ->set('deploy_path', '~/Sites/{{application}}');    
     
 // Tasks
 
@@ -36,5 +37,5 @@ after('deploy:failed', 'deploy:unlock');
 
 // Migrate database before symlink new release.
 
-before('deploy:symlink', 'artisan:migrate');
+// before('deploy:symlink', 'artisan:migrate');
 
